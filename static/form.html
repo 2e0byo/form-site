@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://unpkg.com/chota@latest">
+    <style>
+     body.dark {
+       --bg-color: #000;
+       --bg-secondary-color: #131316;
+       --font-color: #f5f5f5;
+       --color-grey: #ccc;
+       --color-darkGrey: #777;
+     }
+     .card {
+       margin-top: 0.5cm;
+       margin-bottom: 0.5cm;
+     }
+     :root {
+       --grid-maxWidth: 8in;
+     }
+    </style>
+    <script>
+     if (window.matchMedia &&
+         window.matchMedia('(prefers-color-scheme: dark)').matches) {
+       document.body.classList.add('dark');
+     }
+    </script>
+  </head>
+  <body>
+    <div class="container" role="document" id="top">
+      <header role="banner">
+        <h1>End of module feedback</h1>
+        <div>
+          At the end of the module I would really appreciate your feedback
+          (both positive and negative) on how things have gone this year.
+        </div>
+      </header>
+
+      <section>
+        <form action="./form" method="POST">
+          <div class="card">
+            <label for="module">Module:</label>
+            <select name="module" id="module">
+              <option>God and Evil</option>
+              <option>Mediæval Theology and Spirituality</option>
+            </select>
+            <label for="name">Name (Optional):</label>
+            <input type="text" id="name" name="name">
+          </div>
+
+          <div class="card">
+            <p>
+              Think back to the beginning of the course.  How does where you are now
+              compare to where you were then: do you find it easier/harder to
+              think/talk about these things?  Do you feel like you have more of a
+              grasp of what’s going on, or do the problems seem larger?  Do you feel
+              more confident in your understanding, or does it all seem a chaotic
+              muddle?  Can you think of anything which has contributed to being this
+              way?
+            </p>
+            <textarea id="q1" name="q1" rows="5"></textarea>
+          </div>
+
+          <div class="card">
+            <p>
+              If you identified something which could be better last time, have
+              things got better/stayed the same/got worse?
+            </p>
+            <textarea name="q2" rows="5"></textarea>
+          </div>
+
+          <div class="card">
+            <p>
+              Can you think of an example since the last questionnaire of
+              something which has and hasn’t worked well? Does anything
+              particularly memorable stand out?
+            </p>
+            <textarea name="q3" rows="5"></textarea>
+          </div>
+
+          <div class="card">
+            <p>
+              This term I’ve written a lot more on the whiteboard, to try to
+              provide something a bit closer to the structure of a
+              handout/powerpoint/lecture notes.  Has this helped/hindered/made any
+              difference?
+            </p>
+            <textarea name="q4" rows="5"></textarea>
+          </div>
+
+          <div class="card">
+            <p>
+              Have these seminars changed how you approach any of the issues we’ve
+              covered/theology in general?  Can you think of an example of how if
+              so?
+            </p>
+            <textarea name="q5" rows="5"></textarea>
+          </div>
+
+          <input type="submit" id="submit">
+        </form>
+      </section>
+
+      <footer>
+        Made with <a href="https://jenil.github.io/chota/">Chota</a>.  Source available at <a href="https://github.com/2e0byo/form-site">Github</a>.
+
+        We don't use eat your cookies or anything like that.
+      </footer>
+    </div>
+  </body>
+</html>
