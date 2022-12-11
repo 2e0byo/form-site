@@ -17,12 +17,6 @@
        --grid-maxWidth: 8in;
      }
     </style>
-    <script>
-     if (window.matchMedia &&
-         window.matchMedia('(prefers-color-scheme: dark)').matches) {
-       document.body.classList.add('dark');
-     }
-    </script>
   </head>
   <body>
     <div class="container" role="document" id="top">
@@ -32,4 +26,11 @@
           Thanks!  Your feedback has been recorded.
         </div>
       </header>
+    </div>
+    <script>
+     if (window.matchMedia &&
+         window.matchMedia('(prefers-color-scheme: dark)').matches) {
+       document.body.classList.add('dark');
+     }
+    </script>
 </html>
